@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Series from "./components/SeriesList";
+import Plot from "./components/PlotSeries";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { IntlProvider } from "react-intl";
@@ -23,6 +24,7 @@ ReactDOM.render(
 		<h1>T.V. Series</h1>
 		<hr className="m-1" />
 		<Series url={rx.test(navigator.language) ? urlES : urlEN} />
+		<Plot url={rx.test(navigator.language) ? urlES : urlEN} />
 	</IntlProvider>,
 	document.getElementById("root")
 );
